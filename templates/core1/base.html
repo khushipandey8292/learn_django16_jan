@@ -4,22 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}  {% endblock title %}</title>
+    <title>{% block title %} {% endblock title %}</title>
     <link rel="stylesheet" href='{% static "css/style.css" %}'/>
+    {% comment %} <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'/> {% endcomment %}
 </head>
-<body>
+<body id='bg' style="background-image:url('{% static 'image/photo.png' %}')";>
     <nav>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Django Course</li>
+          <li><a href="/temp_app1/learn_home">Home</a></li>
+          <li><a href="/temp_app1/learn_about">About</a></li>
+          <li><a href="/temp_app2/learn_course">Django Course</a></li>
         </ul>
     </nav>
- {% block content%} {% endblock content %}
- <img src='{% static "image/flower.jpg" %}' width=700/>
+ {% block content %} {% endblock content %}
+ {% block content1 %} {% endblock content1 %}
+ {% block content2 %} {% endblock content2 %}
+ <img src='{% static "image/flower.jpg" %}' width=300/>
  <script src="{% static 'js/all.js' %}"></script>
  <form action=" ">
-    <input style="color:green" type="button" value="click me" onclick="disp()"/>
- </form>
+    <input  type="button" value="click me" onclick="disp()"/>
+ </form>  
+ {% include "core1/Topcourse.html" with p='AIML' %}
+ <sript src="{% static 'js/bootstrap.min.js' %}"></script>
+ <sript src="{% static 'js/jquery.js' %}"></script>
+ <sript src="{% static 'js/popper.js' %}"></script> 
+{% comment %} <button type="button" class="btn btn-primary">submit</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>  {% endcomment %}
 </body>
 </html>

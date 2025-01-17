@@ -1,3 +1,12 @@
-body{
-    background-color: blueviolet;
+#bg{
+    background-repeat: no-repeat;
+    background-size: 1900px 900px;
+    background-position: center;
+    background-attachment: fixed;
+}
+li{
+    color: rgb(148, 235, 235);
+}
+h2{
+    color: rgb(179, 125, 231);
 }
