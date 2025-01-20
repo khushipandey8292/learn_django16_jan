@@ -4,4 +4,7 @@ class Student(models.Model):
     stuname=models.CharField(max_length=40)
     stuemail=models.EmailField(max_length=50)
     stupass=models.CharField(max_length=50)
-# Create your models here.
+    stubranch=models.CharField(max_length=10,default='not available')
+
+    def __str__(self):
+        return self.stuname

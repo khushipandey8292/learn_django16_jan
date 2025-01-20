@@ -1,3 +1,4 @@
 from django.contrib import admin
-
+from temp_inherit_app1.models import Student
+admin.site.register(Student)
 # Register your models here.
