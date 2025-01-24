@@ -8,12 +8,16 @@
         body{
             background:rgb(139, 225, 78);
         }
+        {% comment %} .errorlist{
+            list-style-type:none;
+            color:red;
+        } {% endcomment %}
     </style>
 </head>
 <body>
 
     {% comment %} <form action="" method="get"> {% endcomment %}
-    <form action="" method="POST">
+    <form action="" method="POST" novalidate>
         <table>
             {% csrf_token %}
             {{form.as_p}}  

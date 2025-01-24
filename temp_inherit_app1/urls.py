@@ -5,5 +5,5 @@ urlpatterns = [
     path('learn_about/',views.about),
     path('learn_db/',views.studentinfo),
     path('learn_st_form/',views.showformdata),
-    path('success/',views.thanyou),
+    # path('success/',views.thanyou),
 ]
