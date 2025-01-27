@@ -20,5 +20,5 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('temp_app1/',include('temp_inherit_app1.urls')),
-    path('temp_app2/',include('temp_inherit_app2.urls')),
+    path('',include('temp_inherit_app2.urls')),
 ]

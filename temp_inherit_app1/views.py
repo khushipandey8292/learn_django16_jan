@@ -18,6 +18,7 @@ def studentinfo(request):
 #  fm.order_fields(field_order=['First_name','Last_name','email'])
 #  return render(request,'core/studentform.html',{'form':fm})
 
+
 # def thanyou(request):
 #     return render(request,'core/success.html')
 
@@ -39,6 +40,8 @@ def studentinfo(request):
 #     return render(request,'core/studentform.html',{'form':fm})
 
 
+
+
 # def showformdata(request):
 #     if request.method=='POST':
 #         fm=StudentRegistration(request.POST)
@@ -55,6 +58,7 @@ def studentinfo(request):
 
 
 
+
 def showformdata(request):
     if request.method=='POST':
         fm=StudentRegistration(request.POST)
@@ -67,6 +71,7 @@ def showformdata(request):
     else:
         fm=StudentRegistration()
     return render(request,'core/studentform.html',{'form':fm})
+
 
 
 
